@@ -152,7 +152,7 @@
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <div>
+            <div class="mt mt-2 ml ml-2">
                 <a href="#">
                     <img src="{{asset('admin/images//icon/logo.png')}}" alt="Cool Admin" />
                 </a>
@@ -252,7 +252,7 @@
                     <div class="row mt-0 mb-5">
                         <div class="col-lg-12 margin-tb">
                             <div class="float-left">
-                                <h2>Data Gudang</h2>
+                                <center><h2>Data Gudang</h2></center>
                             </div>
                         </div>
                     </div>

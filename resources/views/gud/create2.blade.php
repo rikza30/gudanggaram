@@ -20,7 +20,7 @@
 
     <!-- Bootstrap CSS-->
     <link href="{{asset('admin/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <!-- Vendor CSS-->
     <link href="{{asset('admin/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
     <link href="{{asset('admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
@@ -134,7 +134,7 @@
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <div class="mt mt-2 ml ml-2">
+            <div>
                 <a href="#">
                     <img src="{{asset('admin/images//icon/logo.png')}}" alt="Cool Admin" />
                 </a>
@@ -143,9 +143,22 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
-                            <a class="js-arrow" href="/home">
+                            <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="active">
                             <a href="{{ route('gud.create')}}">
@@ -218,10 +231,10 @@
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
-                  <div class="row mt-0 mb-2">
-                    <div class="col-lg-12 margin-tb">
-                        <div class="float-left">
-                                <center><h2>Bon Barang Habis Pakai</h2></center>
+                    <div class="row mt-5 mb-5 border border-5">
+                        <div class="col-lg-12 margin-tb">
+                            <div class="float-center">
+                                <h2>Bon Barang Habis Pakai</h2>
                             </div>
                         </div>
                     </div>
@@ -234,7 +247,7 @@
                     
                     <form action="{{ route('gud.store') }}" method="POST">
                         @csrf
-                        
+                        <div class="border border-5">
                         <div class="form-group mb-3">
                             <input type="date" class="form-control" id="Tanggal" name="Tanggal">
                           </div>
@@ -262,7 +275,7 @@
                             <input type="text" class="form-control" id="Keterangan" placeholder="Keterangan" name="Keterangan">
                             <label for="Keterangan" class="form-label">Keterangan</label>
                           </div>
-                        
+                        </div>
                           
                         <button type="submit" class="btn btn-primary">Kirim</button>
                         <a href="/home" class="btn btn-primary">Kembali</a>

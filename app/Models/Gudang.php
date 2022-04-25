@@ -13,6 +13,6 @@ class Gudang extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'Tanggal', 'NamaPegawai', 'NamaBarang', 'Jumlah', 'Keterangan'
+        'Tanggal', 'NamaPegawai', 'NamaBarang', 'Jumlah', 'UnitKerja', 'Keterangan'
     ];
 }
